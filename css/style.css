@@ -58,6 +58,13 @@ main {
   padding: 95px 0;
 }
 
+@media (max-width: 767px) {
+  main {
+    width: 90%;
+    padding: 30px 0;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,6 +82,12 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0 0 50px;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 0 0 30px;
+  }
 }
 
 header h1 {
@@ -124,10 +137,27 @@ header i:hover {
           flex-direction: row;
 }
 
+@media (max-width: 767px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about article:first-child {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
+}
+
+@media (max-width: 767px) {
+  .about article:first-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .about article:first-child div {
@@ -170,6 +200,14 @@ header i:hover {
           flex: 0 0 60%;
 }
 
+@media (max-width: 767px) {
+  .about article:last-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .about article:last-child img {
   height: 100%;
   -o-object-fit: cover;
@@ -191,6 +229,12 @@ header i:hover {
   margin: 20px auto;
 }
 
+@media (max-width: 767px) {
+  .servicies article:first-child p {
+    width: 90%;
+  }
+}
+
 .servicies article:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,10 +254,27 @@ header i:hover {
   margin-top: 50px;
 }
 
+@media (max-width: 767px) {
+  .servicies article:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .servicies article:last-child div {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 33%;
           flex: 1 0 33%;
+}
+
+@media (max-width: 767px) {
+  .servicies article:last-child div {
+    width: 90%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .servicies article:last-child div h4 {
@@ -227,6 +288,15 @@ header i:hover {
   border-radius: 50%;
 }
 
+@media (max-width: 767px) {
+  .servicies article:last-child div {
+    border-bottom: 1px solid #9190a5;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 90%;
+            flex: 1 0 90%;
+  }
+}
+
 .servicies article:last-child div:nth-child(1) i {
   color: #c0c727;
 }
@@ -236,8 +306,23 @@ header i:hover {
   border-left: 1px solid #9190a5;
 }
 
+@media (max-width: 767px) {
+  .servicies article:last-child div:nth-child(2) {
+    border-left: none;
+    border-right: none;
+  }
+}
+
 .servicies article:last-child div:nth-child(2) i {
   color: #44796f;
+}
+
+@media (max-width: 767px) {
+  .servicies article:last-child div:nth-child(3) {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: none;
+  }
 }
 
 .servicies article:last-child div:nth-child(3) i {
@@ -253,6 +338,12 @@ header i:hover {
 .gallery .owl-carousel {
   width: 97%;
   margin: 30px auto 0;
+}
+
+@media (max-width: 767px) {
+  .gallery .owl-carousel {
+    width: 90%;
+  }
 }
 
 .gallery .owl-nav {
@@ -287,11 +378,33 @@ header i:hover {
           box-shadow: 0 0 10px 5px #9190a5;
 }
 
+@media (max-width: 767px) {
+  .programs article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .programs article div {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   color: #000;
+}
+
+@media (max-width: 767px) {
+  .programs article div:nth-child(4) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .programs article div:nth-child(3) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .programs article div img {
@@ -331,6 +444,12 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  footer {
+    padding: 50px 5%;
+  }
+}
+
 footer p {
   font-weight: 400;
   margin: 30px 0 20px;
@@ -364,6 +483,12 @@ footer form input {
   outline: none;
 }
 
+@media (max-width: 767px) {
+  footer form input {
+    border-radius: 30px;
+  }
+}
+
 footer form button {
   padding: 10px 30px;
   color: #000;
@@ -381,5 +506,12 @@ footer form button {
 
 footer form button:hover {
   background-color: #9190a5;
+}
+
+@media (max-width: 767px) {
+  footer form button {
+    border-radius: 30px;
+    margin-top: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

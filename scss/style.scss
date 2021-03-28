@@ -7,11 +7,18 @@ main {
     width: 100%;
     margin: 0 auto;
     padding: 95px 0;
+    @media (max-width: 767px) {
+        width: 90%;
+        padding: 30px 0;
+    }
 }
 // header
 header {
     @include flex(space-between, center);
     padding: 0 0 50px;
+    @media (max-width: 767px) {
+        padding: 0 0 30px;
+    }
     h1 {
         font-size: 1.5rem;
         font-weight: 800;
@@ -38,9 +45,15 @@ header {
 }
 .about {
     @include flex(space-between, stretch);
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
     article {
         &:first-child {
             flex: 0 0 40%;
+            @media (max-width: 767px) {
+                order: 2;
+            }
             div {
                 padding: 50px;
 
@@ -61,6 +74,9 @@ header {
         }
         &:last-child {
             flex: 0 0 60%;
+            @media (max-width: 767px) {
+                order: 1;
+            }
             img {
                 height: 100%;
                 object-fit: cover;
@@ -74,19 +90,29 @@ header {
     color: $black;
     padding: $padding;
     article {
-        //@extend .container;
         text-align: center;
         &:first-child {
             p {
                 width: 50%;
                 margin: 20px auto;
+                @media (max-width: 767px) {
+                    width: 90%;
+                }
             }
         }
         &:last-child {
             @include flex(center, center);
             margin-top: 50px;
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
             div {
                 flex: 1 0 33%;
+                @media (max-width: 767px) {
+                    width: 90%;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
                 h4 {
                     margin: 20px 0;
                 }
@@ -96,6 +122,10 @@ header {
                     border: 1px solid $lightGray;
                     border-radius: 50%;
                 }
+                @media (max-width: 767px) {
+                    border-bottom: 1px solid $lightGray;
+                    flex: 1 0 90%;
+                }
                 &:nth-child(1) {
                     i {
                         color: $olivia;
@@ -104,11 +134,20 @@ header {
                 &:nth-child(2) {
                     border-right: 1px solid $lightGray;
                     border-left: 1px solid $lightGray;
+                    @media (max-width: 767px) {
+                        border-left: none;
+                        border-right: none;
+                    }
                     i {
                         color: $darkOlivia;
                     }
                 }
                 &:nth-child(3) {
+                    @media (max-width: 767px) {
+                        padding-bottom: 0px;
+                        margin-bottom: 0px;
+                        border-bottom: none;
+                    }
                     i {
                         color: $lightBlue;
                     }
@@ -126,6 +165,9 @@ header {
         &-carousel {
             width: 97%;
             margin: 30px auto 0;
+            @media (max-width: 767px) {
+                width: 90%;
+            }
         }
         &-nav {
             color: $black;
@@ -142,9 +184,20 @@ header {
         width: 90%;
         margin: 0 auto;
         box-shadow: 0 0 10px 5px $lightGray;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
         div {
             flex: 0 0 50%;
             color: $black;
+            @media (max-width: 767px) {
+                &:nth-child(4) {
+                    order: 1;
+                }
+                &:nth-child(3) {
+                    order: 2;
+                }
+            }
             img {
                 object-fit: cover;
                 height: 100%;
@@ -167,6 +220,9 @@ footer {
     background-color: $darkOlivia;
     padding: 50px 20%;
     text-align: center;
+    @media (max-width: 767px) {
+        padding: 50px 5%;
+    }
     p {
         font-weight: 400;
         margin: 30px 0 20px;
@@ -181,11 +237,18 @@ footer {
             font-size: 1rem;
             border: none;
             outline: none;
+            @media (max-width: 767px) {
+                border-radius: 30px;
+            }
         }
         button {
             @include btn;
             border-radius: 0px 30px 30px 0px;
             margin: 0;
+            @media (max-width: 767px) {
+                border-radius: 30px;
+                margin-top: 20px;
+            }
         }
     }
 }
