@@ -6,7 +6,186 @@ main {
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
+    padding: 95px 0;
 }
 // header
 header {
+    @include flex(space-between, center);
+    padding: 0 0 50px;
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        span {
+            color: $olivia;
+            border-left: 2px solid $olivia;
+            padding-left: 5px;
+            margin-left: 5px;
+            font-weight: 400;
+        }
+    }
+    i {
+        font-size: 1.5rem;
+        margin-left: 10px;
+        transition: $transition;
+        cursor: pointer;
+        &:first-child {
+            margin-left: 0px;
+        }
+        &:hover {
+            color: $olivia;
+        }
+    }
+}
+.about {
+    @include flex(space-between, stretch);
+    article {
+        &:first-child {
+            flex: 0 0 40%;
+            div {
+                padding: 50px;
+
+                p {
+                    font-size: 1.3rem;
+                    margin: 20px 0 20px;
+                }
+                &:first-child {
+                    background-color: $darkOlivia;
+                }
+                &:last-child {
+                    background-color: $lightBlue;
+                }
+                button {
+                    @include btn;
+                }
+            }
+        }
+        &:last-child {
+            flex: 0 0 60%;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+// servicies
+.servicies {
+    background-color: $white;
+    color: $black;
+    padding: $padding;
+    article {
+        //@extend .container;
+        text-align: center;
+        &:first-child {
+            p {
+                width: 50%;
+                margin: 20px auto;
+            }
+        }
+        &:last-child {
+            @include flex(center, center);
+            margin-top: 50px;
+            div {
+                flex: 1 0 33%;
+                h4 {
+                    margin: 20px 0;
+                }
+                i {
+                    font-size: 2.1rem;
+                    padding: 20px;
+                    border: 1px solid $lightGray;
+                    border-radius: 50%;
+                }
+                &:nth-child(1) {
+                    i {
+                        color: $olivia;
+                    }
+                }
+                &:nth-child(2) {
+                    border-right: 1px solid $lightGray;
+                    border-left: 1px solid $lightGray;
+                    i {
+                        color: $darkOlivia;
+                    }
+                }
+                &:nth-child(3) {
+                    i {
+                        color: $lightBlue;
+                    }
+                }
+            }
+        }
+    }
+}
+// gallery
+.gallery {
+    padding: $padding;
+    background-color: $olivia;
+    text-align: center;
+    .owl {
+        &-carousel {
+            width: 97%;
+            margin: 30px auto 0;
+        }
+        &-nav {
+            color: $black;
+            margin-bottom: 20px;
+        }
+    }
+}
+// programs
+.programs {
+    padding: $padding;
+    background-color: $white;
+    article {
+        @include flex(center, center);
+        width: 90%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px 5px $lightGray;
+        div {
+            flex: 0 0 50%;
+            color: $black;
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+            &:nth-child(1),
+            &:nth-child(4) {
+                padding: 40px;
+                p {
+                    margin: 10px 0 20px;
+                }
+                button {
+                    @include btn($lightBlue);
+                }
+            }
+        }
+    }
+}
+// footer
+footer {
+    background-color: $darkOlivia;
+    padding: 50px 20%;
+    text-align: center;
+    p {
+        font-weight: 400;
+        margin: 30px 0 20px;
+    }
+    form {
+        @include flex(center, center);
+        input {
+            padding: 10px 30px;
+            color: $black;
+            border-radius: 30px 0 0 30px;
+            margin: 0;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+        button {
+            @include btn;
+            border-radius: 0px 30px 30px 0px;
+            margin: 0;
+        }
+    }
 }

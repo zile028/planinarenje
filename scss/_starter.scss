@@ -1,19 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;800&display=swap");
 
 // VARIABLE
-$fontFamily: "Roboto", sans-serif;
-$black: #081624;
-$darkBlue: #0c062e;
-$pink: #501755;
-$darkPink: #492866;
-$violet: #2d1854;
-$accents: #b41aab;
-$lightGray: #9190a5;
-$white: #fff;
+$fontFamily: "Raleway", sans-serif;
 $fontSize: 16px;
+$black: #000;
+$white: #fff;
+$olivia: #c0c727;
+$darkOlivia: #44796f;
+$lightBlue: #60c4f5;
+$lightGray: #9190a5;
+$padding: 50px 0;
 $transition: 0.4s ease;
-$padding: 80px 0;
-$textShadow: 0 0 20px $accents;
+
 // RESET STYLE
 * {
     margin: 0;
@@ -26,14 +24,17 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-image: url(../img/bg.jpg);
+    background-image: linear-gradient(rgba($darkOlivia, 0.6), rgba($darkOlivia, 0.7)), url(../img/bg.jpg);
     background-size: cover;
     background-position: center;
     font-family: $fontFamily;
     font-size: $fontSize;
-    line-height: 1.7;
     color: $white;
-    font-weight: 500;
+    font-weight: 400;
+}
+h2 {
+    font-weight: 400;
+    font-size: 2rem;
 }
 ul {
     list-style: none;
@@ -47,28 +48,27 @@ img {
     display: block;
 }
 .container {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     @media (max-width: 767px) {
         width: 90%;
     }
 }
-button {
-    padding: 15px 30px;
-    color: $accents;
-    background-color: $white;
+@mixin btn($bgColor: $olivia) {
+    padding: 10px 30px;
+    color: $black;
+    background-color: $bgColor;
     text-transform: uppercase;
-    font-style: italic;
     border: none;
-    font-size: 0.9rem;
-    color: $violet;
-    position: relative;
+    font-size: 1rem;
+    border-radius: 30px;
     cursor: pointer;
     transition: $transition;
-    box-shadow: 10px 10px $accents;
     &:hover {
-        background-color: $accents;
-        color: $white;
-        box-shadow: 10px 10px $lightGray;
+        @if $bgColor==$olivia {
+            background-color: $lightGray;
+        } @else {
+            background-color: $olivia;
+        }
     }
 }

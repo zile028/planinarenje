@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +11,19 @@ html {
 }
 
 body {
-  background-image: url(../img/bg.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(68, 121, 111, 0.6)), to(rgba(68, 121, 111, 0.7))), url(../img/bg.jpg);
+  background-image: linear-gradient(rgba(68, 121, 111, 0.6), rgba(68, 121, 111, 0.7)), url(../img/bg.jpg);
   background-size: cover;
   background-position: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
-  line-height: 1.7;
   color: #fff;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 ul {
@@ -36,7 +41,7 @@ img {
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -46,33 +51,335 @@ img {
   }
 }
 
-button {
-  padding: 15px 30px;
-  color: #b41aab;
-  background-color: #fff;
-  text-transform: uppercase;
-  font-style: italic;
-  border: none;
-  font-size: 0.9rem;
-  color: #2d1854;
-  position: relative;
-  cursor: pointer;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-  -webkit-box-shadow: 10px 10px #b41aab;
-          box-shadow: 10px 10px #b41aab;
-}
-
-button:hover {
-  background-color: #b41aab;
-  color: #fff;
-  -webkit-box-shadow: 10px 10px #9190a5;
-          box-shadow: 10px 10px #9190a5;
-}
-
 main {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+  padding: 95px 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 0 50px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+header h1 span {
+  color: #c0c727;
+  border-left: 2px solid #c0c727;
+  padding-left: 5px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+header i {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+header i:first-child {
+  margin-left: 0px;
+}
+
+header i:hover {
+  color: #c0c727;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.about article:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+}
+
+.about article:first-child div {
+  padding: 50px;
+}
+
+.about article:first-child div p {
+  font-size: 1.3rem;
+  margin: 20px 0 20px;
+}
+
+.about article:first-child div:first-child {
+  background-color: #44796f;
+}
+
+.about article:first-child div:last-child {
+  background-color: #60c4f5;
+}
+
+.about article:first-child div button {
+  padding: 10px 30px;
+  color: #000;
+  background-color: #c0c727;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.about article:first-child div button:hover {
+  background-color: #9190a5;
+}
+
+.about article:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+.about article:last-child img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.servicies {
+  background-color: #fff;
+  color: #000;
+  padding: 50px 0;
+}
+
+.servicies article {
+  text-align: center;
+}
+
+.servicies article:first-child p {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.servicies article:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 50px;
+}
+
+.servicies article:last-child div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+}
+
+.servicies article:last-child div h4 {
+  margin: 20px 0;
+}
+
+.servicies article:last-child div i {
+  font-size: 2.1rem;
+  padding: 20px;
+  border: 1px solid #9190a5;
+  border-radius: 50%;
+}
+
+.servicies article:last-child div:nth-child(1) i {
+  color: #c0c727;
+}
+
+.servicies article:last-child div:nth-child(2) {
+  border-right: 1px solid #9190a5;
+  border-left: 1px solid #9190a5;
+}
+
+.servicies article:last-child div:nth-child(2) i {
+  color: #44796f;
+}
+
+.servicies article:last-child div:nth-child(3) i {
+  color: #60c4f5;
+}
+
+.gallery {
+  padding: 50px 0;
+  background-color: #c0c727;
+  text-align: center;
+}
+
+.gallery .owl-carousel {
+  width: 97%;
+  margin: 30px auto 0;
+}
+
+.gallery .owl-nav {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.programs {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.programs article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 10px 5px #9190a5;
+          box-shadow: 0 0 10px 5px #9190a5;
+}
+
+.programs article div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  color: #000;
+}
+
+.programs article div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.programs article div:nth-child(1), .programs article div:nth-child(4) {
+  padding: 40px;
+}
+
+.programs article div:nth-child(1) p, .programs article div:nth-child(4) p {
+  margin: 10px 0 20px;
+}
+
+.programs article div:nth-child(1) button, .programs article div:nth-child(4) button {
+  padding: 10px 30px;
+  color: #000;
+  background-color: #60c4f5;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.programs article div:nth-child(1) button:hover, .programs article div:nth-child(4) button:hover {
+  background-color: #c0c727;
+}
+
+footer {
+  background-color: #44796f;
+  padding: 50px 20%;
+  text-align: center;
+}
+
+footer p {
+  font-weight: 400;
+  margin: 30px 0 20px;
+}
+
+footer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer form input {
+  padding: 10px 30px;
+  color: #000;
+  border-radius: 30px 0 0 30px;
+  margin: 0;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+footer form button {
+  padding: 10px 30px;
+  color: #000;
+  background-color: #c0c727;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  border-radius: 0px 30px 30px 0px;
+  margin: 0;
+}
+
+footer form button:hover {
+  background-color: #9190a5;
 }
 /*# sourceMappingURL=style.css.map */
